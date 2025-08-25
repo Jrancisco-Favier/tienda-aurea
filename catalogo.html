@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo — Librería Áurea</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tema.css">
+  <link rel="icon" href="img/logo.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="subheader">
+    <div class="container subheader__inner">
+      <a class="brand" href="index.html"><img src="img/logo.jpg" alt="" class="brand__logo"> <span class="brand__name">Librería <strong>Áurea</strong></span></a>
+      <a class="btn btn--ghost" href="index.html">← Volver</a>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Catálogo</h1>
+    <p class="muted">Explora una muestra del catálogo. (Demostración estática)</p>
+
+    <div class="filters">
+      <input class="input" id="filterInput" type="search" placeholder="Filtrar por título o autor…">
+      <select class="input" id="categorySelect">
+        <option value="">Todas las categorías</option>
+        <option>Ficción</option>
+        <option>No ficción</option>
+        <option>Programación</option>
+        <option>Poesía</option>
+      </select>
+    </div>
+
+    <div class="grid-4 cards" id="catalogGrid">
+      <article class="card" data-category="Ficción">
+        <img src="img/1984.png" alt="Portada del libro 1984 de George Orwell">
+        <div class="card__body">
+          <h3>1984</h3>
+          <p class="card__meta">George Orwell • Ficción</p>
+          <div class="price"><span class="price__current">$49.900</span> <span class="price__old">$59.900</span></div>
+          <button
+            class="btn btn--secondary add-to-cart"
+            data-id="1984"
+            data-title="1984"
+            data-author="George Orwell"
+            data-price="49900"
+            data-thumb="img/1984.png"
+          >
+            Añadir
+          </button>
+        </div>
+      </article>
+      <article class="card" data-category="No ficción">
+        <img src="img/sapiens.png" alt="">
+        <div class="card__body">
+          <h3>Sapiens</h3><p class="card__meta">Yuval Noah Harari</p>
+          <div class="price"><span class="price__current">$79.900</span></div>
+          <button
+            class="btn btn--secondary add-to-cart"
+            data-id="sapiens"
+            data-title="Sapiens"
+            data-author="Yuval Noah Harari"
+            data-price="79900"
+            data-thumb="img/sapiens.png"
+          >
+            Añadir
+          </button>
+        </div>
+      </article>
+      <article class="card" data-category="Programación">
+        <img src="img/clean-code.png" alt="">
+        <div class="card__body">
+          <h3>Clean Code</h3><p class="card__meta">Robert C. Martin</p>
+          <div class="price"><span class="price__current">$129.900</span></div>
+          <button
+            class="btn btn--secondary add-to-cart"
+            data-id="clean-code"
+            data-title="Clean Code"
+            data-author="Robert C. Martin"
+            data-price="129900"
+            data-thumb="img/clean-code.png"
+          >
+            Añadir
+          </button>
+        </div>
+      </article>
+      <article class="card" data-category="Poesía">
+        <img src="img/poesia.png" alt="">
+        <div class="card__body">
+          <h3>Poesía Latam</h3><p class="card__meta">Antología</p>
+          <div class="price"><span class="price__current">$39.900</span></div>
+          <button
+            class="btn btn--secondary add-to-cart"
+            data-id="poesia-latam"
+            data-title="Poesía Latam"
+            data-author="Antología"
+            data-price="39900"
+            data-thumb="img/poesia.png"
+          >
+            Añadir
+          </button>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer--mini">
+    <div class="container footer__bar">
+      <small> <span id="year"></span> Librería Áurea</small>
+      <small> <span id="year"></span> Juan Diaz S.A.S.</small>
+      <a class="cart" href="carrito.html" aria-label="Carrito">🛒 <span id="cartCount">0</span></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/carrito.js" defer></script>
+</body>
+</html>

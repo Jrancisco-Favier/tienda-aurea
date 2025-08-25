@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Librería Áurea — Tu tienda online de libros</title>
+  <meta name="description" content="Descubre bestsellers, novedades y clásicos. Envíos rápidos, ofertas y recomendaciones personalizadas." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tema.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Librería Áurea — Tu tienda online de libros">
+  <meta property="og:description" content="Bestsellers, novedades y clásicos a un clic.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <link rel="icon" href="img/logo.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Inicio Librería Áurea">
+        <img src="img/logo.jpg" alt="" class="brand__logo" />
+        <span class="brand__name">Librería <strong>Áurea</strong></span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr-only">Menú</span>
+          ☰
+        </button>
+        <ul id="navMenu" class="nav__list">
+          <li><a href="index.html#bestsellers">Mas vendidos</a></li>
+          <li><a href="index.html#categorias">Categorías</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a class="btn btn--ghost" href="catalogo.html#ofertas">Ofertas</a></li>
+          <li><a class="btn btn--primary" href="catalogo.html">Comprar</a></li>
+          <li><a class="cart" href="carrito.html" aria-label="Ir al carrito">🛒 <span id="cartCount">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container grid-2">
+      <div class="hero__copy">
+        <h1>Los libros que te mueven, <span class="grad">a un clic</span>.</h1>
+        <p class="lead">Explora novedades, bestsellers y clásicos con envíos en 24–48h. Recomendaciones hechas para ti.</p>
+        <form id="searchForm" class="search">
+          <label class="sr-only" for="q">Buscar libros</label>
+          <input id="q" name="q" class="input" type="search" placeholder="Busca por título, autor o ISBN…" autocomplete="off">
+          <button class="btn btn--primary" type="submit">Buscar</button>
+        </form>
+        <div class="badges">
+          <span>★ /5 Opiniones</span> 
+          <span>🚚 Envío rápido</span>
+          <span>🔒 Pago seguro</span>
+        </div>
+      </div>
+      <figure class="hero__media">
+        <img src="img/libros.png" alt="libros apilados en una mesa" loading="eager">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="features">
+    <div class="container grid-4">
+      <article class="feature">
+        <div class="feature__icon">📚</div>
+        <h3>Catálogo curado</h3>
+        <p>Selección editorial con foco en calidad: ficción, no ficción, académicos y cómics.</p>
+      </article>
+      <article class="feature">
+        <div class="feature__icon">⚡</div>
+        <h3>Entrega veloz</h3>
+        <p>Red logística optimizada para entregas en 24–48 horas cerca de Cartago.</p>
+      </article>
+      <article class="feature">
+        <div class="feature__icon">💳</div>
+        <h3>Pagos flexibles</h3>
+        <p>Tarjeta, PSE, contraentrega y cuotas sin interés en seleccionados.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="bestsellers" class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2>Top ventas de la semana</h2>
+        <a class="link" href="catalogo.html">Ver todo →</a>
+      </div>
+      <div class="grid-4 cards" id="bestGrid">
+        <!-- Tarjetas de ejemplo -->
+        <article class="card">
+          <img src="img/1984.png" alt="Portada del libro 1984 de George Orwell">
+          <div class="card__body">
+            <h3>1984</h3>
+            <p class="card__meta">George Orwell • Ficción</p>
+            <div class="price"><span class="price__current">$49.900</span> <span class="price__old">$59.900</span></div>
+            <button
+              class="btn btn--secondary add-to-cart"
+              data-id="1984"
+              data-title="1984"
+              data-author="George Orwell"
+              data-price="49900"
+              data-thumb="img/1984.png"
+              class="add-to-cart"
+            >
+              Añadir
+            </button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/sapiens.png" alt="Portada del libro Sapiens de Yuval Noah Harari">
+          <div class="card__body">
+            <h3>Sapiens</h3>
+            <p class="card__meta">Yuval Noah Harari • Ensayo</p>
+            <div class="price"><span class="price__current">$79.900</span></div>
+            <button
+              class="btn btn--secondary add-to-cart"
+              data-id="sapiens"
+              data-title="Sapiens"
+              data-author="Yuval Noah Harari"
+              data-price="79900"
+              data-thumb="img/sapiens.png"
+            >
+              Añadir
+            </button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/poesia.png" alt="Antología de poesía latinoamericana">
+          <div class="card__body">
+            <h3>Poesía Latam</h3>
+            <p class="card__meta">Antología • Poesía</p>
+            <div class="price"><span class="price__current">$39.900</span></div>
+            <button
+              class="btn btn--secondary add-to-cart"
+              data-id="poesia-latam"
+              data-title="Poesía Latam"
+              data-author="Antología"
+              data-price="39900"
+              data-thumb="img/poesia.png"
+            >
+              Añadir
+            </button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/clean-code.png" alt="Portada del libro Clean Code de Robert C. Martin">
+          <div class="card__body">
+            <h3>Clean Code</h3>
+            <p class="card__meta">Robert C. Martin • Programación</p>
+            <div class="price"><span class="price__current">$129.900</span></div>
+            <button
+              class="btn btn--secondary add-to-cart"
+              data-id="clean-code"
+              data-title="Clean Code"
+              data-author="Robert C. Martin"
+              data-price="129900"
+              data-thumb="img/clean-code.png"
+            >
+              Añadir
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="categorias" class="section alt">
+    <div class="container">
+      <h2>Explora por categorías</h2>
+      <div class="grid-6 chips">
+        <a class="chip" href="catalogo.html?c=ficcion">Ficción</a>
+        <a class="chip" href="catalogo.html?c=no-ficcion">No ficción</a>
+        <a class="chip" href="catalogo.html?c=academico">Académico (en proceso)</a>
+        <a class="chip" href="catalogo.html?c=poesia">Poesía</a>
+        <a class="chip" href="catalogo.html?c=comics">Cómics (en proceso)</a>
+        <a class="chip" href="catalogo.html?c=infantil">Infantil (en proceso)</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Testimonios falsos-->
+  <section class="section">
+    <div class="container">
+      <h2>Lo que dicen nuestros lectores</h2>
+      <div class="grid-3 testimonials">
+        <blockquote class="t">
+          <p>“La curaduría es excelente. Siempre encuentro algo nuevo.”</p>
+          <footer>— Ana R.</footer>
+        </blockquote>
+        <blockquote class="t">
+          <p>“Entrega súper rápida y servicio impecable. 10/10.”</p>
+          <footer>— Carlos M.</footer>
+        </blockquote>
+        <blockquote class="t">
+          <p>“Las recomendaciones me han descubierto autores increíbles.”</p>
+          <footer>— Luisa P.</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta__inner">
+      <div>
+        <h2>Ahorra 10% en tu primera compra</h2>
+        <p>Únete al boletín y recibe ofertas y recomendaciones personalizadas.</p>
+      </div>
+      <form id="newsletterForm" class="newsletter" novalidate>
+        <label class="sr-only" for="email">Correo</label>
+        <input id="email" name="email" class="input" type="email" placeholder="tu@email.com" required>
+        <button class="btn btn--primary" type="submit">Unirme</button>
+        <small class="form__msg" id="newsMsg" aria-live="polite"></small>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container grid-4">
+      <div>
+        <a class="brand brand--footer" href="index.html">
+          <img src="img/logo.jpg" alt="" class="brand__logo" />
+          <span class="brand__name">Librería <strong>Áurea</strong></span>
+        </a>
+        <p class="muted">Leer nos hace mejores. Envíos a toda Colombia.</p>
+      </div>
+      <nav>
+        <h4>Explorar</h4>
+        <ul class="list">
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="index.html#bestsellers">Mas vendido</a></li>
+          <li><a href="index.html#categorias">Categorías</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <h4>Compañía</h4>
+        <ul class="list">
+          <li><a href="nosotros.html">Sobre nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="#">Términos & Privacidad</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Redes</h4>
+        <ul class="list social">
+          <li><a href="https://www.instagram.com" aria-label="Instagram">Instagram</a></li>
+          <li><a href="https://www.facebook.com/?locale=es_LA" aria-label="Facebook">Facebook</a></li>
+          <li><a href="https://x.com/?lang=es" aria-label="X">X</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bar">
+      <small> <span id="year"></span> Librería Áurea. Todos los derechos reservados.</small>
+      <small> <span id="year"></span> Juan Diaz S.A.S.</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/carrito.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto — Librería Áurea</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tema.css">
+  <link rel="icon" href="img/logo.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="subheader">
+    <div class="container subheader__inner">
+      <a class="brand" href="index.html"><img src="img/logo.jpg" alt="" class="brand__logo"> <span class="brand__name">Librería <strong>Áurea</strong></span></a>
+      <a class="btn btn--ghost" href="index.html">← Volver</a>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Hablemos</h1>
+    <form id="contactForm" class="form" novalidate>
+      <div class="grid-2">
+        <div>
+          <label for="nombre">Nombre</label>
+          <input class="input" id="nombre" name="nombre" required>
+        </div>
+        <div>
+          <label for="correo">Correo</label>
+          <input class="input" id="correo" name="correo" type="email" required>
+        </div>
+      </div>
+      <div>
+        <label for="mensaje">Mensaje</label>
+        <textarea class="input" id="mensaje" name="mensaje" rows="5" required></textarea>
+      </div>
+      <div class="form__row">
+        <label class="checkbox">
+          <input type="checkbox" id="acepto" required>
+          <span>Acepto la política de privacidad</span>
+        </label>
+      </div>
+      <button class="btn btn--primary" type="submit">Enviar</button>
+      <small class="form__msg" id="contactMsg" aria-live="polite"></small>
+    </form>
+  </main>
+
+  <footer class="footer--mini">
+    <div class="container footer__bar">
+      <small> <span id="year"></span> Librería Áurea</small>
+      <small> <span id="year"></span> Juan Diaz S.A.S.</small>
+      <a class="cart" href="carrito.html" aria-label="Carrito">🛒 <span id="cartCount">0</span></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/carrito.js" defer></script>
+</body>
+</html>

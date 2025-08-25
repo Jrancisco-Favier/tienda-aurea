@@ -1,0 +1,54 @@
+/* Pequeñas animaciones y acentos de marca */
+.card, .feature, .t, .stat{
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover, .feature:hover, .t:hover, .stat:hover{
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.btn--primary:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.hero__media img{
+  box-shadow: var(--shadow);
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.chip{transition: transform .15s}
+.chip:hover{transform: translateY(-2px)}
+
+.grad-border {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden; /* Asegura que el borde no sobresalga */
+}
+
+.grad-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px; /* Ajusta el grosor del borde */
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.grad-border > * {
+  position: relative;
+  z-index: 2;
+  background: var(--bg, #fff); /* Fondo interno, ajusta según tu tema */
+  border-radius: inherit;
+}
+
+/* Sutil brillo en CTA */
+.cta__inner{
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:20px;
+  padding:18px;
+  background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+}

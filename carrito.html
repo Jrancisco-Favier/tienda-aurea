@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrito — Librería Áurea</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tema.css">
+  <meta name="description" content="Revisa los libros añadidos a tu carrito, ajusta cantidades y finaliza tu compra.">
+  <link rel="icon" href="img/logo.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="subheader">
+    <div class="container subheader__inner">
+      <a class="brand" href="index.html">
+        <img src="img/logo.jpg" alt="" class="brand__logo">
+        <span class="brand__name">Librería <strong>Áurea</strong></span>
+      </a>
+      <nav>
+        <a class="btn btn--ghost" href="catalogo.html">← Seguir comprando</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Tu carrito</h1>
+    <p class="muted">Verifica tus productos antes de continuar al pago.</p>
+
+    <!-- Estado vacío -->
+    <div id="emptyState" class="t" style="display:none">
+      <p>Tu carrito está vacío. ¿Buscas inspiración? Explora los <a class="link" href="index.html#bestsellers">bestsellers</a> o el <a class="link" href="catalogo.html">catálogo completo</a>.</p>
+    </div>
+
+    <div id="cartWrap" class="grid-3" style="align-items:start">
+      <!-- Lista -->
+      <section class="grad-border" style="grid-column:1 / span 2">
+        <div class="cards" style="padding:14px;border-radius:18px;background:#0f1424">
+          <div id="cartList" class="list" aria-live="polite" style="display:grid;gap:14px"></div>
+        </div>
+      </section>
+
+      <!-- Resumen -->
+      <aside class="grad-border">
+        <div class="t" style="border-radius:18px">
+          <h2 style="margin-top:0">Resumen</h2>
+
+          <div class="form__row">
+            <label for="coupon">Cupón de descuento</label>
+            <div style="display:flex;gap:10px">
+              <input id="coupon" class="input" placeholder="EJ: BIENVENIDA10">
+              <button id="applyCoupon" class="btn btn--secondary" type="button">Aplicar</button>
+            </div>
+            <small id="couponMsg" class="form__msg" aria-live="polite"></small>
+          </div>
+
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,.08);margin:14px 0">
+
+          <ul class="list" style="gap:8px">
+            <li style="display:flex;justify-content:space-between"><span>Subtotal</span><strong id="subtotal">$0</strong></li>
+            <li style="display:flex;justify-content:space-between"><span>Descuento</span><strong id="discount">$0</strong></li>
+            <li style="display:flex;justify-content:space-between"><span>Envío</span><strong id="shipping">$0</strong></li>
+            <li style="display:flex;justify-content:space-between"><span>Total</span><strong id="total">$0</strong></li>
+          </ul>
+
+          <div class="form__row" style="margin-top:16px;display:flex;gap:10px">
+            <button id="btnCheckout" class="btn btn--primary" type="button">Finalizar compra</button>
+            <button id="btnClear" class="btn btn--ghost" type="button">Vaciar</button>
+          </div>
+          <small class="muted">Pago 100% seguro. Envíos 24–48h.</small>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer--mini">
+    <div class="container footer__bar">
+      <small> <span id="year"></span> Librería Áurea</small>
+      <small> <span id="year"></span> Juan Diaz S.A.S.</small>
+      <a class="cart" href="#" aria-label="Carrito">🛒 <span id="cartCount">0</span></a>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
+  <script src="js/carrito.js" defer></script>
+</body>
+</html>
